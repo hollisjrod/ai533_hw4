@@ -18,6 +18,9 @@ class ReplayBuffer_remote(object):
 
     def __len__(self):
         return len(self._storage)
+    
+    def length(self):
+        return len(self._storage)
 
     def add(self, obs_t, action, reward, obs_tp1, done):
         data = (obs_t, action, reward, obs_tp1, done)
